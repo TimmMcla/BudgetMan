@@ -2,9 +2,11 @@ package com.nedeveloper.billman.entities;
 
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.util.Calendar;
+import java.util.Date;
 
 @Entity(tableName = "expense")
 public class Expense {
@@ -27,6 +29,7 @@ public class Expense {
      * @param dueDate
      * @param dueFrequency
      */
+    @Ignore
     public Expense(String name, double amt, Calendar dueDate, Frequency dueFrequency){
 
         this.name = name;
@@ -44,7 +47,7 @@ public class Expense {
      * @param amtRegularlyChanges
      * @param amtDuePercentage
      */
-    public Expense(String name, double amt, Calendar dueDate, Frequency dueFrequency, boolean amtRegularlyChanges, float amtDuePercentage){
+    public Expense(String name, double amt, Calendar dueDate, boolean amtRegularlyChanges, float amtDuePercentage , Frequency dueFrequency){
         this.name = name;
         this.amt = amt;
         this.dueDate = dueDate;

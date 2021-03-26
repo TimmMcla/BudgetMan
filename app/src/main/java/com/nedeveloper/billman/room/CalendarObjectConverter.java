@@ -8,8 +8,9 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
-/*
+
 public class CalendarObjectConverter {
 
     private static final DateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy", Locale.ENGLISH);
@@ -27,9 +28,16 @@ public class CalendarObjectConverter {
     }
 
     @TypeConverter
-    public static String convertFromCalendar( Calendar calendar){
-        return dateFormat.format(calendar.getTime());
+    public static Calendar convertFromString(String calendar){
+        Date date;
+        try{
+            date = dateFormat.parse(calendar);
+        }catch (Exception e){
+            return null;
+        }
+        Calendar newCalendar = Calendar.getInstance();
+        newCalendar.setTime(date);
+        return newCalendar;
     }
 
 }
-*/

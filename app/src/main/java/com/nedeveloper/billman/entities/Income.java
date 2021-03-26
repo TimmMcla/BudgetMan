@@ -1,6 +1,7 @@
 package com.nedeveloper.billman.entities;
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.util.Calendar;
@@ -19,6 +20,7 @@ public class Income {
     private float payChangePercentage;
     private boolean payRegularlyChanges;
 
+    @Ignore
     public Income( String name, String payType, double amt, Calendar payDate, Frequency payFrequency){
         this.name = name;
         this.payType = payType;
@@ -27,7 +29,7 @@ public class Income {
         this.payFrequency = payFrequency;
     }
 
-    public Income( String name, String payType, double amt, Calendar payDate, Frequency payFrequency, boolean payRegularlyChanges, float payChangePercentage){
+    public Income( String name, String payType, double amt, Calendar payDate, boolean payRegularlyChanges, float payChangePercentage,Frequency payFrequency){
         this.name = name;
         this.payType = payType;
         this.amt = amt;

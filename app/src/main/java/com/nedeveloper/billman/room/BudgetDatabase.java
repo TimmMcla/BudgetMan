@@ -22,7 +22,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Database(version = 0, entities = {Expense.class, Income.class}, exportSchema = false)
-//@TypeConverters({CalendarObjectConverter.class})
+@TypeConverters({CalendarObjectConverter.class, FrequencyObjectConverter.class})
 public abstract class BudgetDatabase extends RoomDatabase {
 
     abstract ExpenseDao expenseDao();
