@@ -37,6 +37,8 @@ dependencies {
 
     testImplementation "androidx.room:room-testing:$room_version"
 
+    implementation("com.google.guava:guava:30.1.1-jre")
+
     implementation "androidx.fragment:fragment:$fragment_version"
 
     implementation 'androidx.appcompat:appcompat:1.2.0'

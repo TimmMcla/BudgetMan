@@ -21,5 +21,5 @@
         android:id="@+id/navigation_notifications"
         android:name="com.nedeveloper.billman.ui.budget.BudgetFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_budget" />
 </navigation>

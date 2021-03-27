@@ -19,4 +19,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        app:layout_constraintTop_toBottomOf="@id/text_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintCircleRadius="32dp"
+        android:text="@string/add_income_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>-->
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
